@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre:not(.hljs), .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre:not(.hljs), .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre:not(.hljs), .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="project-3-collaboration-and-competition---report">Project 3: Collaboration and Competition - Report</h1>
+<h3 id="solution">Solution</h3>
+<h4 id="approach">Approach</h4>
+<p>My initial approach was to try my implementation of the DDPG learning algorithm from Project 2, slightly modified to work with a multi-agent environment. The training code (initially adapted from the lectures/Udacity's Deep Reinforcement Learning Github Repository) is contained in <code>train_agent.py</code> and the agent and network model in <code>ddpg_agent.py</code> and <code>model.py</code> accordingly.</p>
+<h4 id="neural-network-architecture">Neural Network Architecture</h4>
+<h5 id="actor">Actor</h5>
+<p>The Actor network is a 4-layer fully connected neural network (with ReLu activations for the hidden layers and a Tanh activation for the output layer) with 24 units in the input layer, 128 units in each of the hidden layers and 4 units in the output layer. The output of the first hidden layer is batch-normalized for performance and stability improvement (based on a recommendation from the DRLND Slack channel).</p>
+<h5 id="critic">Critic</h5>
+<p>The Critic network is a 4-layer fully connected neural network (with ReLu activations) with 24 units in the input layer, 128 units in each of the hidden layers and 1 unit in the output layer. The output of the first hidden layer is batch-normalized for performance and stability improvement (based on a recommendation from the DRLND Slack channel).</p>
+<h4 id="hyperparameters">Hyperparameters</h4>
+<p>The initial approach used the following hyperparameters:</p>
+<p>DDPG:</p>
+<ul>
+<li>n_episodes (int): maximum number of training episodes: <em>2000</em></li>
+<li>max_t (int): maximum number of timesteps per episode: <em>1000</em></li>
+</ul>
+<p>Agent:</p>
+<ul>
+<li>BUFFER_SIZE = <em>int(1e6)</em>  # replay buffer size</li>
+<li>BATCH_SIZE minibatch size: <em>256</em></li>
+<li>GAMMA: discount factor: <em>0.99</em></li>
+<li>TAU: for soft update of target parameters: <em>1e-3</em></li>
+<li>LR_ACTOR: learning rate of the actor: <em>2e-4</em></li>
+<li>LR_CRITIC: learning rate of the critic: <em>2e-4</em></li>
+<li>WEIGHT_DECAY: L2 weight decay: <em>0</em></li>
+</ul>
+<h4 id="results">Results</h4>
+<p>After some experiments with the structure of actor and critic networks and learning rates, my DDPG implementation with parameters described above performed adequately and trained the agent to solve the environment with average score of +0.5 in 862 episodes.</p>
+<p>After the environment was solved, I've let the training continue until all 2000 training episodes were completed. The learning continued to progress impressively well and reached an average score of +2.11 around episode 1900.</p>
+<p>See the rewards plot below:</p>
+<p><img src="file:///d%3A/Courses/DRLND/DRLND-Project3-CollaborationAndCompetition/Figure_1.png" alt="Rewards Plot" title="Rewards Plot"></p>
+<p>The resulting stored weights for the initial point when the environment was solved (<code>checkpoint_critic_done.pth</code> and <code>checkpoint_actor_done.pth</code>) and the point with a maximum score (<code>checkpoint_critic_max.pth</code> and <code>checkpoint_actor_max.pth</code>) are stored in the project's repository.</p>
+<p>Other network configurations (listed below) yielded somewhat worse results:</p>
+<ul>
+<li>Actor and Critic with 2 hidden layers of 64 neurons each - solved the environment in 1513 episodes</li>
+<li>Actor and Critic with 2 hidden layers of 256 neurons each - solved the environment in 1228 episodes</li>
+<li>Actor and Critic with 1st hidden layers of 64 neurons and 2nd hidden layer with 128 neurons - solved the environment in 1310 episodes</li>
+<li>Actor and Critic with 1st hidden layers of 128 neurons and 2nd hidden layer with 64 neurons - solved the environment in 1317 episodes</li>
+</ul>
+<h3 id="future-work">Future work</h3>
+<p>As mentioned before, it seems that this DDPG implementation performs adequately. However, if we wanted to experiment further, another multi-agent training algorithm, such as PPO, A3C, or D4PG might be a way to go.</p>
+
+    </body>
+    </html>
